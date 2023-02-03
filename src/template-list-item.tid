@@ -8,16 +8,24 @@ type: text/vnd.tiddlywiki
 
 <$button class="linonetwo-template-list-item-container" >
 
-  <$action-createtiddler $basetitle=<<target>> $overwrite=yes $template=<<currentTiddler>> >
+  <$reveal type="match" stateTitle=<<target>> stateField="draft.of" text="">
+    <$action-createtiddler $basetitle=<<target>> $overwrite=yes $template=<<currentTiddler>> >
+      <!-- When copy the tag, we should remove the $:/tags/TextEditor/Template , otherwise new tiddler will become a template too -->
+      <$action-setfield $tiddler=<<target>> $field="tags" $value={{{ [<currentTiddler>get[tags]split[ ]] +[remove[$:/tags/TextEditor/Template]] +[join[ ]] }}} />
+    </$action-createtiddler>
+  </$reveal>
 
-    <!-- When copy the tag, we should remove the $:/tags/TextEditor/Template , otherwise new tiddler will become a template too -->
-    <$action-setfield $tiddler=<<target>> $field="tags" $value={{{ [<currentTiddler>get[tags]split[ ]] +[remove[$:/tags/TextEditor/Template]] +[join[ ]] }}} />
-
-    <!-- Fix draft tiddler 's fields get overwrite by the createtiddler https://github.com/Jermolene/TiddlyWiki5/issues/4411#issuecomment-1015526629 -->
-    <$action-setfield $tiddler=<<target>> $field="draft.of" $value=<<draftOf>> />
-    <$action-setfield $tiddler=<<target>> $field="draft.title" $value=<<targetTitle>> />
-  
-  </$action-createtiddler>
+  <!-- Fix draft tiddler 's fields get overwrite by the createtiddler https://github.com/Jermolene/TiddlyWiki5/issues/4411#issuecomment-1015526629
+    And only do this in edit mode (has `draft.of` field).
+  -->
+  <$reveal type="nomatch" stateTitle=<<target>> stateField="draft.of" text="">
+    <$action-createtiddler $basetitle=<<target>> $overwrite=yes $template=<<currentTiddler>> >
+      <!-- When copy the tag, we should remove the $:/tags/TextEditor/Template , otherwise new tiddler will become a template too -->
+      <$action-setfield $tiddler=<<target>> $field="tags" $value={{{ [<currentTiddler>get[tags]split[ ]] +[remove[$:/tags/TextEditor/Template]] +[join[ ]] }}} />
+      <$action-setfield $tiddler=<<target>> $field="draft.of" $value=<<draftOf>> />
+      <$action-setfield $tiddler=<<target>> $field="draft.title" $value=<<targetTitle>> />
+    </$action-createtiddler>
+  </$reveal>
 
 
   <div class="linonetwo-template-list-item-content">
