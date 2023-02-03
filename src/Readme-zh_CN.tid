@@ -12,6 +12,8 @@ title: $:/plugins/linonetwo/template-list/Readme-zh_CN
 
 `$:/tags/TextEditor/Template` 是模板的标签。将这个标签添加到一个条目上，该条目就会显示在新建条目时的模板列表中。
 
+在模板列表中有一个 `+` 按钮，点它就可以新建一个模板。
+
 你也可以用这个按钮来新建模板 [[$:/plugins/linonetwo/NewTemplateButton]]
 
 {{$:/plugins/linonetwo/NewTemplateButton}}

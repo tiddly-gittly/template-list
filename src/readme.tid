@@ -12,6 +12,8 @@ This plugin provides [[FeiShu Doc|https://www.feishu.cn/hc/zh-CN/articles/222318
 
 `$:/tags/TextEditor/Template` is the tag for the templates. Add this tag to a tiddler, and that tiddler will show up in the template list.
 
+There is a `+` button in the template list, click on it to create a new template.
+
 Or you can use this button to create a new template [[$:/plugins/linonetwo/NewTemplateButton]]
 
 {{$:/plugins/linonetwo/NewTemplateButton}}
