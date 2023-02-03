@@ -1,0 +1,6 @@
+title: DemoTemplate
+type: text/vnd.tiddlywiki
+tags: $:/tags/TextEditor/Template Todo
+done: no
+
+A demo template with a `done` field, and these texts, and a `Todo` tag.

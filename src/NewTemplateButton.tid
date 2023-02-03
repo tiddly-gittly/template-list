@@ -1,0 +1,8 @@
+creator: LinOnetwo
+type: text/vnd.tiddlywiki
+title: $:/plugins/linonetwo/NewTemplateButton
+
+<$button>
+  <$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD">> tags="$:/tags/TextEditor/Template" />
+  New Template
+</$button>

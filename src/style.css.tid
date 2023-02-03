@@ -63,6 +63,16 @@ type: text/vnd.tiddlywiki
   flex-direction: column;
 }
 
+
+.linonetwo-template-list-item-new {
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.linonetwo-template-list-item-new:hover {
+  opacity: 1;
+}
+
 .linonetwo-template-list-item-content p {
   margin: 5px;
   margin-bottom: 0;
