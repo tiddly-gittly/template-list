@@ -4,6 +4,6 @@ tags: $:/tags/EditTemplate
 title: $:/plugins/linonetwo/template-list/EditTemplate
 type: text/vnd.tiddlywiki
 
-<% if [<currentTiddler>!has:field[_is_skinny]is[blank]] %>
+<% if [<currentTiddler>!has:field[_is_skinny]!has[text]] %>
   <<template-list >>
 <% endif %>

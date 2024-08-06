@@ -6,14 +6,14 @@ description: <<lingo ToggleTemplateListDescription $:/plugins/linonetwo/template
 \whitespace trim
 \define lingo-base() $:/plugins/linonetwo/template-list/language/
 
-<%if [<currentTiddler>!has:field[_is_skinny]is[blank]] %>
+<%if [<currentTiddler>!has:field[_is_skinny]!has[text]] %>
   <$wikify name="ToggleTemplateList" text="<<lingo ToggleTemplateList>>" mode="inline">
     <$button
       tooltip=<<ToggleTemplateList>>
       aria-label=<<ToggleTemplateList>>
       class=<<tv-config-toolbar-class>>
       set="$:/state/open-template-list"
-      setTo={{{ [[$:/state/open-template-list]get[text]compare:eq:string[yes]then[no]else[yes]] }}}
+      setTo={{{ [[$:/state/open-template-list]get[text]compare:string:eq[yes]then[no]else[yes]] }}}
     >
       <$list filter="[<tv-config-toolbar-icons>match[yes]]">
         {{$:/core/images/stamp}}
@@ -25,4 +25,4 @@ description: <<lingo ToggleTemplateListDescription $:/plugins/linonetwo/template
       </$list>
     </$button>
   </$wikify>
-<%endif%>
+<% endif %>

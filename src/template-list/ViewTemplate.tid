@@ -1,8 +1,8 @@
 title: $:/plugins/linonetwo/template-list/ViewTemplate
 tags: $:/tags/ViewTemplate
 
-<% if [{$:/state/open-template-list}compare:eq:string[yes]] %>
-  <% if [<currentTiddler>!has:field[_is_skinny]is[blank]] %>
+<% if [{$:/state/open-template-list}compare:string:eq[yes]] %>
+  <% if [<currentTiddler>!has:field[_is_skinny]!has[text]] %>
     <<template-list targetBlankTiddler >>
   <% endif %>
 <% endif %>
