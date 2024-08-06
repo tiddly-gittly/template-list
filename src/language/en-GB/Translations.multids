@@ -1,0 +1,6 @@
+title: $:/plugins/linonetwo/template-list/language/en-GB/
+
+Name: Template List
+Description: Provide a template list in the style of [[Feishu Document|https://www.feishu.cn/hc/en-US/articles/351142559376-use-templates-in-feishu-docs]] for newly created tiddlers.
+ToggleTemplateList: Toggle template list
+ToggleTemplateListDescription: Click to show or hide the template list, only show up on empty tiddlers.

@@ -1,12 +1,16 @@
-creator: LinOnetwo
-type: text/vnd.tiddlywiki
-title: $:/plugins/linonetwo/template-list/Readme-zh_CN
+title: $:/plugins/linonetwo/template-list/language/zh-Hans/Readme
 
-[[English|$:/plugins/linonetwo/template-list/Readme]]
+\procedure lingo-base() $:/plugins/linonetwo/template-list/language/
+
+! <<lingo Name>>
+
+<<lingo Description>>
 
 !! 功能介绍
 
-此插件为新创建的条目提供[[飞书文档|https://www.feishu.cn/hc/zh-CN/articles/222318959624]]风格的模板列表。
+在编辑内容为空的条目时，会显示一个模板列表和一个搜索栏。可以搜索所需的模板一键应用。
+
+考虑到查看模式不常用模板功能，所以在查看空白条目时，会显示一个查看工具栏按钮 {{$:/core/images/stamp}}，点击后才会显示和编辑模式一样的模板列表。
 
 !! 添加新模板
 

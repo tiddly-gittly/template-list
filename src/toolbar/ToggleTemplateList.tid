@@ -1,0 +1,28 @@
+title: $:/plugins/linonetwo/template-list/toolbar/ToggleTemplateList
+tags: $:/tags/ViewToolbar
+caption: {{$:/core/images/stamp}} <<lingo ToggleTemplateList $:/plugins/linonetwo/template-list/language/>>
+description: <<lingo ToggleTemplateListDescription $:/plugins/linonetwo/template-list/language/>>
+
+\whitespace trim
+\define lingo-base() $:/plugins/linonetwo/template-list/language/
+
+<%if [<currentTiddler>!has:field[_is_skinny]is[blank]] %>
+  <$wikify name="ToggleTemplateList" text="<<lingo ToggleTemplateList>>" mode="inline">
+    <$button
+      tooltip=<<ToggleTemplateList>>
+      aria-label=<<ToggleTemplateList>>
+      class=<<tv-config-toolbar-class>>
+      set="$:/state/open-template-list"
+      setTo={{{ [[$:/state/open-template-list]get[text]compare:eq:string[yes]then[no]else[yes]] }}}
+    >
+      <$list filter="[<tv-config-toolbar-icons>match[yes]]">
+        {{$:/core/images/stamp}}
+      </$list>
+      <$list filter="[<tv-config-toolbar-text>match[yes]]">
+        <span class="tc-btn-text">
+          <$text text=<<ToggleTemplateList>>/>
+        </span>
+      </$list>
+    </$button>
+  </$wikify>
+<%endif%>

@@ -1,0 +1,31 @@
+title: $:/plugins/linonetwo/template-list/language/en-GB/Readme
+
+\procedure lingo-base() $:/plugins/linonetwo/template-list/language/
+
+! <<lingo Name>>
+
+<<lingo Description>>
+
+!! Features
+
+When you are editing an empty tiddler, a template list and a search bar will show up. You can search for the template you want and apply it with one click.
+
+Considering that the template feature is not commonly used in view mode, when viewing an empty tiddler, a view toolbar button {{$:/core/images/stamp}} will show up. Click on it to show the template list just like in edit mode.
+
+!! Add new template
+
+`$:/tags/TextEditor/Template` is the tag for the templates. Add this tag to a tiddler, and that tiddler will show up in the template list.
+
+There is a `+` button in the template list, click on it to create a new template.
+
+Or you can use this button to create a new template [[$:/plugins/linonetwo/NewTemplateButton]]
+
+{{$:/plugins/linonetwo/NewTemplateButton}}
+
+!! Apply the template
+
+After you create an empty tiddler, that have an empty text field. You will notice that a template and a search bar show up in the bottom of the tiddler.
+
+Click on a template will apply all tags and all fields to the currentTiddler.
+
+You can scroll to reveal more template if you have more than two rows of templates.

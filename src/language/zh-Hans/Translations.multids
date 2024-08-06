@@ -1,0 +1,6 @@
+title: $:/plugins/linonetwo/template-list/language/zh-Hans/
+
+Name: 模板列表
+Description: 为新创建的条目提供[[飞书文档|https://www.feishu.cn/hc/zh-CN/articles/222318959624]]风格的模板列表。
+ToggleTemplateList: 开关模板列表
+ToggleTemplateListDescription: 点击显示或隐藏模板列表，仅会在空白条目上展示。
