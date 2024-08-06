@@ -7,20 +7,20 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 
 <div class="linonetwo-template-list-container">
-<!-- show search bar if there are at least one template -->
-<$list filter="[all[tiddlers+shadows]tag[$:/tags/TextEditor/Template]!is[draft]count[]compare:number:gt[0]]">
-  <$edit-text tiddler="$:/state/search-template-list/input" default="" placeholder="search template name" tag=input class="linonetwo-template-list-search" />
-</$list>
+  <!-- show search bar if there are at least one template -->
+  <$list filter="[all[tiddlers+shadows]tag[$:/tags/TextEditor/Template]!is[draft]count[]compare:number:gt[0]]">
+    <$edit-text tiddler="$:/state/search-template-list/input" default="" placeholder="search template name" tag=input class="linonetwo-template-list-search" />
+  </$list>
 
 
-<div class="linonetwo-template-list">
-  <$let target=<<currentTiddler>> targetTitle={{{ [<target>get[draft.title]] ~[<target>get[title]] }}} search={{{ [[$:/state/search-template-list/input]get[text]] }}} draftOf={{{ [<target>get[draft.of]] }}} >
-    <$list filter="[all[tiddlers+shadows]tag[$:/tags/TextEditor/Template]!is[draft]search:title,name,description,readme<search>]">
-      <<template-list-item>>
-    </$list>
-  </$let>
-  <<template-list-item-new>>
-</div>
+  <div class="linonetwo-template-list">
+    <$let target=<<currentTiddler>> targetTitle={{{ [<target>get[draft.title]] ~[<target>get[title]] }}} search={{{ [[$:/state/search-template-list/input]get[text]] }}} draftOf={{{ [<target>get[draft.of]] }}} >
+      <$list filter="[all[tiddlers+shadows]tag[$:/tags/TextEditor/Template]!is[draft]search:title,name,description,readme<search>]">
+        <<template-list-item>>
+      </$list>
+    </$let>
+    <<template-list-item-new>>
+  </div>
 </div>
 
 \end
