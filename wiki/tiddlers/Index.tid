@@ -1,0 +1,7 @@
+title: Index
+
+!! Usage
+
+Try create a new tiddler to see the template list below it.
+
+{{$:/core/ui/Buttons/new-tiddler}}
