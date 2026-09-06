@@ -6,7 +6,7 @@
 
 This plugin provides [[[FeiShu Doc](https://www.feishu.cn/hc/zh-CN/articles/222318959624)|https://www.feishu.cn/hc/zh-CN/articles/222318959624]] style template list for newly created tiddler.
 
-Try create a new tiddler on [demo page](tiddly-gittly.github.io/template-list/).
+Try create a new tiddler on [demo page](https://tiddly-gittly.github.io/template-list/).
 
 ## !! Add new template
 
